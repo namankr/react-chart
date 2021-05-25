@@ -1,0 +1,94 @@
+{
+  "result": {
+    "mental": {
+      "lastSyncedAt": "2021-05-04T13:36:03.666Z",
+      "isOk": false,
+      "moodData": {
+        "dominance": 1.04,
+        "pleasantness": 2,
+        "energy": -0.46,
+        "overallBaseLine": 3.14,
+        "dominanceScoreBaseLine": 2.96,
+        "pleasantnessScoreBaseLine": 3,
+        "energyScoreBaseLine": 3.46,
+        "dominancePercentage": 80,
+        "pleasantnessPercentage": 100,
+        "energyPercentage": 60,
+        "dominanceBaseLinePercentage": 135,
+        "pleasantnessBaseLinePercentage": 167,
+        "energyBaseLinePercentage": 87
+      },
+      "mentalData": {
+        "mentalEnergy": 3.9,
+        "baseLine": 3.03,
+        "mentalEnergyPercentage": 78,
+        "mentalEnergyBaseLinePercentage": 128.71,
+        "composureScoreBaseLine": 3.14,
+        "composureScorePercentage": 14,
+        "motivationScoreBaseLine": 3.06,
+        "motivationScorePercentage": 16,
+        "concentrationScoreBaseLine": 2.87,
+        "concentrationScorePercentage": 20,
+        "energyScoreBaseLine": 3.29,
+        "energyScorePercentage": 12,
+        "confidenceScoreBaseLine": 2.81,
+        "confidenceScorePercentage": 16
+      }
+    },
+    "recovery": {
+      "lastSyncedAt": "2021-05-04T13:36:03.768Z",
+      "isOk": true,
+      "weeklyNutritionScore": 0,
+      "dailyRecoveryPercentage": 89,
+      "recoveryBaseLine": 60.5,
+      "hrvBaseLine": 104.91,
+      "sleepBaseLine": 7.71
+    },
+    "physical": {
+      "lastSyncedAt": "2021-02-28T00:00:00.000Z",
+      "isOk": true,
+      "physicaldata": [
+        {
+          "variant": "left",
+          "bodyPart": "elbow",
+          "score": 0
+        },
+        {
+          "variant": "right",
+          "bodyPart": "elbow",
+          "score": 0
+        },
+        {
+          "variant": "left",
+          "bodyPart": "hip",
+          "score": 0
+        },
+        {
+          "variant": "right",
+          "bodyPart": "hip",
+          "score": 0
+        },
+        {
+          "variant": "left",
+          "bodyPart": "shoulder",
+          "score": 0
+        },
+        {
+          "variant": "right",
+          "bodyPart": "shoulder",
+          "score": 0
+        },
+        {
+          "variant": "center",
+          "bodyPart": "upperBack",
+          "score": 0
+        },
+        {
+          "variant": "center",
+          "bodyPart": "motorStability",
+          "score": null
+        }
+      ]
+    }
+  }
+}

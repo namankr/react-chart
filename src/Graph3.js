@@ -3,16 +3,19 @@ import React from "react";
 import { PieChart, Pie, Label, Cell, ResponsiveContainer } from "recharts";
 
 
-const data = [
-    { name: "Bubble Sold %", value: 50 },
-    { name: "Bubble Left %", value: 50 }
-];
-
 const data1 = [
     { name: "Bubble Sold %", value: 100 }
 ];
 
-function Graph3() {
+const Graph3 = (d) => {
+
+    const energyPercentage = d.data.energyPercentage;
+
+    const data = [
+        { name: "covered %", value: energyPercentage },
+        { name: "Left %", value: 100 - energyPercentage }
+    ];
+
     return (
         <ResponsiveContainer width="40%" aspect={0.7}>
             <PieChart width={33} height={33}>
@@ -49,8 +52,7 @@ function Graph3() {
                             textTransform: "uppercase",
                         }}
                     />
-                </Pie>
-                
+                </Pie> 
             </PieChart>
         </ResponsiveContainer>
     );

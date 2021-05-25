@@ -1,23 +1,37 @@
 import React from "react";
+import "./App.css"
 
-import { PieChart, Pie, Label, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Label, Cell, Legend, ResponsiveContainer, Text } from "recharts";
 
-
-const data = [
-    { name: "Bubble Sold %", value: 20 },
-    { name: "Bubble Left %", value: 80 }
-];
 
 const data1 = [
     { name: "Bubble Sold %", value: 100 },
-    
+
 ];
 
-function Graph1() {
+
+// const style = () => {
+//     return <span style={{ position: "absolute",color:"Red"}}> Hello World</span>;
+//   };
+
+const Graph1 = (d) => {
+
+    const dominancePercentage = d.data.dominancePercentage;
+
+    const data = [
+        { name: "covered %", value: dominancePercentage },
+        { name: "Left %", value: 100 - dominancePercentage }
+    ];
+
+    const renderLabel = () => {
+
+        return <Text style={{color:"Red", width:"20px", height:"30px"}}> Hello world </Text>;
+    }
+
     return (
-        <ResponsiveContainer width="40%" aspect={0.7}>
+        <ResponsiveContainer width="40%" aspect={0.7} >
             <PieChart width={33} height={33}>
-            <Pie data={data1} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={29.5567} fill="#FFFFFF" blendStroke="#FFFFFF" opacity="0.2"/>
+                <Pie data={data1} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={29.5567} fill="#FFFFFF" blendStroke="#FFFFFF" opacity="0.2" />
                 <Pie
                     data={data}
                     cx="50%"
@@ -51,7 +65,6 @@ function Graph1() {
                         }}
                     />
                 </Pie>
-                
             </PieChart>
         </ResponsiveContainer>
     );
