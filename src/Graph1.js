@@ -10,9 +10,6 @@ const data1 = [
 ];
 
 
-// const style = () => {
-//     return <span style={{ position: "absolute",color:"Red"}}> Hello World</span>;
-//   };
 
 const Graph1 = (d) => {
 
@@ -23,10 +20,52 @@ const Graph1 = (d) => {
         { name: "Left %", value: 100 - dominancePercentage }
     ];
 
-    const renderLabel = () => {
 
-        return <Text style={{color:"Red", width:"20px", height:"30px"}}> Hello world </Text>;
-    }
+    const CustomLabel = ({ viewBox, d }) => {
+        const { cx, cy } = viewBox;
+        const { dominanceBaseLinePercentage, dominancePercentage } = d.data;
+        let percentageAboveBaseLine = null; let percentageBelowBaseLine = null; let atBaseLine = null
+        if (dominancePercentage > dominanceBaseLinePercentage) {
+          percentageAboveBaseLine = Math.round((dominancePercentage) / (dominanceBaseLinePercentage) * 100);
+        } else if (dominancePercentage === dominanceBaseLinePercentage) {
+          atBaseLine = "atBaseLine";
+        } else {
+          percentageBelowBaseLine = 100 - Math.round((dominancePercentage) / (dominanceBaseLinePercentage) * 100);
+        }
+    
+        return (
+          <React.Fragment>
+            <text x={cx - 30} y={cy + 60}>
+              <tspan
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "0.7500em",
+                  fill: "#FFFFFF",
+                  fontFamily: "Roboto",
+                  fontStyle: "normal",
+                  lineHeight: "14px"
+                }}
+              >
+                Dominance
+                  </tspan>
+            </text>
+            <text x={cx - 55} y={cy + 80}>
+              <tspan
+                style={{
+                  fontSize: "0.8em",
+                  fill: "#FFFFFF",
+                  fontFamily: "Roboto"
+                }}
+              >
+                {percentageBelowBaseLine != null && `${percentageBelowBaseLine}% Below baseline`}
+                {percentageAboveBaseLine != null && `${percentageAboveBaseLine}% Abobe baseline`}
+                {atBaseLine != null && 'At Baseline'}
+    
+              </tspan>
+            </text>
+          </React.Fragment>
+        );
+      };
 
     return (
         <ResponsiveContainer width="40%" aspect={0.7} >
@@ -64,6 +103,18 @@ const Graph1 = (d) => {
                             textTransform: "uppercase",
                         }}
                     />
+                              <Label
+            value={data[0].value}
+            content={<CustomLabel d={d} />}
+            position="inside"
+            fill="grey"
+            style={{
+              fontSize: "32px",
+              fontWeight: "bold",
+              fontFamily: "Roboto",
+              marginTop: "100px"
+            }}
+          />
                 </Pie>
             </PieChart>
         </ResponsiveContainer>

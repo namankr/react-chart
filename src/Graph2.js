@@ -10,7 +10,6 @@ const data1 = [
 
 const Graph2 = (d) => {
   const pleasantnessPercentage = d.data.pleasantnessPercentage;
-
   const data = [
     { name: "covered %", value: pleasantnessPercentage },
     { name: "Left %", value: 100 - pleasantnessPercentage }
@@ -19,7 +18,7 @@ const Graph2 = (d) => {
 
   const CustomLabel = ({ viewBox, d }) => {
     const { cx, cy } = viewBox;
-    const { pleasantnessBaseLinePercentage, pleasantnessPercentage } = d.data;
+    const { pleasantnessPercentage, pleasantnessBaseLinePercentage } = d.data;
     let percentageAboveBaseLine = null; let percentageBelowBaseLine = null; let atBaseLine = null
     if (pleasantnessPercentage > pleasantnessBaseLinePercentage) {
       percentageAboveBaseLine = Math.round((pleasantnessPercentage) / (pleasantnessBaseLinePercentage) * 100);
@@ -47,7 +46,7 @@ const Graph2 = (d) => {
             Pleasantness
               </tspan>
         </text>
-        <text x={cx - 60} y={cy + 80}>
+        <text x={cx - 55} y={cy + 80}>
           <tspan
             style={{
               fontSize: "0.8em",
@@ -55,8 +54,8 @@ const Graph2 = (d) => {
               fontFamily: "Roboto"
             }}
           >
-            {percentageBelowBaseLine != null && `${percentageBelowBaseLine} % Below baseline`}
-            {percentageAboveBaseLine != null && `${percentageAboveBaseLine} % Abobe baseline`}
+            {percentageBelowBaseLine != null && `${percentageBelowBaseLine}% Below baseline`}
+            {percentageAboveBaseLine != null && `${percentageAboveBaseLine}% Abobe baseline`}
             {atBaseLine != null && 'At Baseline'}
 
           </tspan>
