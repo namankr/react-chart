@@ -21,18 +21,18 @@
       "mentalData": {
         "mentalEnergy": 3.9,
         "baseLine": 3.03,
-        "mentalEnergyPercentage": 78,
+        "mentalEnergyPercentage": 50,
         "mentalEnergyBaseLinePercentage": 128.71,
         "composureScoreBaseLine": 3.14,
-        "composureScorePercentage": 14,
+        "composureScorePercentage": 10,
         "motivationScoreBaseLine": 3.06,
-        "motivationScorePercentage": 16,
+        "motivationScorePercentage": 5,
         "concentrationScoreBaseLine": 2.87,
         "concentrationScorePercentage": 20,
         "energyScoreBaseLine": 3.29,
-        "energyScorePercentage": 12,
+        "energyScorePercentage": 10,
         "confidenceScoreBaseLine": 2.81,
-        "confidenceScorePercentage": 16
+        "confidenceScorePercentage": 5
       }
     },
     "recovery": {

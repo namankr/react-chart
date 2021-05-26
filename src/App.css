@@ -2,32 +2,90 @@
   text-align: center;
 }
 
-
-.container{
+.container-parent {
   display: flex;
+  position: absolute;
   width: 460.16px;
-  height: 213.64px;
-  left: 488px;
-  top: 502px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.19) 100%), #0A0C26;
+  height: 217.9px;
+  left: 489.96px;
+  top: 727.21px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.19) 100%
+    ),
+    #0a0c26;
   box-shadow: 0px 5.31272px 8.50035px rgba(0, 0, 0, 0.25);
   border-radius: 21.2509px;
   margin-left: 20px;
-} 
-
-.mood {
-position: absolute;
-width: 75.47px;
-height: 18.07px;
-left: 512.86px;
-top: 523.74px;
-font-family: Syncopate;
-font-style: normal;
-font-weight: bold;
-font-size: 17.0007px;
-line-height: 18px;
-letter-spacing: 0.531272px;
-text-transform: uppercase;
-color: #0c0101;
 }
 
+.container-child1 {
+  display: flex;
+  position: absolute;
+  width: 204.94px;
+  height: 217.9px;
+  margin-left: 40px;
+}
+
+.container-child2 {
+  position: absolute;
+  width: 204.94px;
+  height: 217.9px;
+  margin-left: 254px;
+  background: #0a0c26;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0px 5.31272px 8.50035px rgba(0, 0, 0, 0.25);
+  border-radius: 21.2509px;
+}
+
+
+.hustle {
+  position: absolute;
+  font-family: Syncopate;
+  margin-top: 20px;
+  margin-left: 50px;
+  height: 18px;
+  width: 100px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17.0007px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.mood {
+  position: absolute;
+  width: 75.47px;
+  height: 18.07px;
+  left: 512.86px;
+  top: 523.74px;
+  font-family: Syncopate;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17.0007px;
+  line-height: 18px;
+  letter-spacing: 0.531272px;
+  text-transform: uppercase;
+  color: #0c0101;
+}
+
+.legend {
+  position: absolute;
+  top:40px;
+  left: 40px;
+  width: 128px;
+  height: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.23729px;
+  color: #ffffff;
+}
